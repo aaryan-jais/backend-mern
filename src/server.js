@@ -7,13 +7,14 @@ const userRoutes = require("../routes/userRoutes");
 const productRoutes = require("../routes/productRoutes");
 
 const app = express();
-app.use(express.json());
+
 //cors
 app.use(cors({
   origin: ["http://localhost:5137","https://frontend-mern-36fi.onrender.com"],
   methods:["GET","POST","PUT","DELETE"],
   credentials:true,
 }))
+app.use(express.json());
 // Database
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
