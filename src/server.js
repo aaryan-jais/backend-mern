@@ -10,7 +10,7 @@ const app = express();
 
 //cors
 app.use(cors({
-  origin: ["http://localhost:5137","https://frontend-mern-36fi.onrender.com"],
+  origin: ["http://localhost:5174","https://frontend-mern-neon.vercel.app"],
   methods:["GET","POST","PUT","DELETE"],
   credentials:true,
 }))
